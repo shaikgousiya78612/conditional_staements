@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>IF CONDITION</h1>
+    {% if a > 5 %}
+        <h2>i am in if block</h2>
+        <marquee behavior="scroll" direction="left"><h2>{{a}}</h2></marquee>
+     {% endif %}  
+
+     
+     
+     <h1>IF ELSE CONDITION</h1>
+     {% if a > b %}
+        <h2>i am in if block</h2>
+        <marquee behavior="scroll" direction="left"><h2>{{a}}</h2></marquee>
+    {% else %}
+        <h2>i am in else block</h2>
+        <marquee behavior="scroll" direction="bottom"><h2>{{b}}</h2></marquee>
+     {% endif %}  
+
+
+     <h1>IF ELIF CONDITION</h1>
+     {% if a > b and a > c %}
+        <h2>a is max {{a}}</h2>
+    {% elif b > c %}
+        <h2>b is max {{b}}</h2>
+    {% else %}
+        <h2> c is max {{c}}</h2>
+    {% endif %}
+
+
+
+    <h1>NESTED IF CONDITION</h1>
+        {% if u > s %}
+            {% if u > g %}
+                <h2> u is max {{u}}</h2>
+            {% else %}
+                <h2> g is max {{g}}</h2>
+            {% endif %}
+        {% else %}
+            {% if s > g %}
+                <h2> s is max {{s}}</h2>
+            {% else %}
+                <h2> g is max {{g}}</h2>
+            {% endif %}
+        {% endif %}
+
+</body>
+</html>
